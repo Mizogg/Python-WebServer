@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import secp256k1 as ice
+from bit import Key
 import hashlib, base58, binascii, random, time
 
 hostName = "localhost"
@@ -316,11 +317,11 @@ class WebServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes("<!DOCTYPE html>","utf-8"))
         self.wfile.write(bytes("<html>","utf-8"))
         self.wfile.write(bytes("<head>","utf-8"))
-        self.wfile.write(bytes("<title>BTC_WebServer</title>","utf-8"))
-        self.wfile.write(bytes("<style>body{font-size:9.3pt;font-family:'Open Sans',sans-serif;}a{text-decoration:none}a:hover {text-decoration: underline}lol: target {background: #ccffcc; }</style>","utf-8"))
+        self.wfile.write(bytes("<title>BTC&ETH_WebServer(Mizogg)</title>","utf-8"))
+        self.wfile.write(bytes("<style>body{font-size:9.5pt;font-family:'Open Sans',sans-serif;}a{text-decoration:none}a:hover {text-decoration: underline}lol: target {background: #ccffcc; }</style>","utf-8"))
         self.wfile.write(bytes("</head>","utf-8"))
         self.wfile.write(bytes("<body link='#0000FF' vlink='#0000FF' alink='#0000FF'>","utf-8"))
-        self.wfile.write(bytes("<h2><span style='color:#34495E;'>Bitcoin private key database: " + str(__class__.addr_count) + " addresses</span></h2>", "utf-8"))
+        self.wfile.write(bytes("<h1><span style='color:#34495E;'>Bitcoin and ETH Private Key Database: " + str(__class__.addr_count) + " Addresses Loaded </span></h1>", "utf-8"))
         ###-------------------------------------------------------------------------------
         if self.path.startswith('/5H') or self.path.startswith('/5J') or self.path.startswith('/5K'):
             first_encode = base58.b58decode(self.path[1:])
@@ -402,7 +403,7 @@ class WebServer(BaseHTTPRequestHandler):
         __class__.randomL4 = __class__.RandomInteger(__class__.L4,__class__.L5)
         __class__.randomL5 = __class__.RandomInteger(__class__.L5,__class__.rndMax)
         #_________________________________________________________________________________                             
-        self.wfile.write(bytes("<h3><span style='color:#D7DBDD;background-color:#145A32;padding:2px;border-radius: 2px;'>Page #</span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>" + str(__class__.num) + "</span> <span style='color:#145A32;'><< out of >></span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>904625697166532776746648320380374280100293470930272690489102837043110636675</span></h3>", "utf-8"))
+        self.wfile.write(bytes("<h2><span style='color:#D7DBDD;background-color:#145A32;padding:2px;border-radius: 2px;'>Page #</span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>" + str(__class__.num) + "</span> <span style='color:#145A32;'><< out of >></span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>904625697166532776746648320380374280100293470930272690489102837043110636675</span></h2>", "utf-8"))
         self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Current page increment for next = " + str(__class__.stride) + "</p>", "utf-8"))
         self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Current random range = " + str(__class__.randomMin) + " - " + str(__class__.randomMax) + "</p>", "utf-8"))
         self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a href='/"+str(__class__.previous)+"'>previous</a> | ", "utf-8"))
@@ -513,7 +514,7 @@ class WebServer(BaseHTTPRequestHandler):
             __class__.addresses.append(__class__.bitAddr_eth.strip());
             __class__.starting_key_hex = hex(__class__.startPrivKey)[2:].zfill(64)
             if __class__.bitAddr == __class__.searchKey or __class__.bitAddr_C == __class__.searchKey or __class__.bitAddr_S == __class__.searchKey or __class__.bitAddr_bech32 == __class__.searchKey or __class__.bitAddr_eth == __class__.searchKey:
-                self.wfile.write(bytes("<lol>" + __class__.starting_key_hex + "</lol>&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#DE3163;'><a target='_blank' href='https://bitaps.com/"+ __class__.bitAddr + "'>" +"<strong>"+ __class__.bitAddr+ "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_C+"'>"+"<strong>"+ __class__.bitAddr_C + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_S+"'>"+"<strong>"+ __class__.bitAddr_S + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_bech32+"'>"+"<strong>"+ __class__.bitAddr_bech32 + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://ethplorer.io/address/" + __class__.bitAddr_eth+"'>"+"<strong>"+ __class__.bitAddr_eth +"</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;<lol>" +"&nbsp;&nbsp;<lol>"+__class__.privKey+"</lol><lol style='color:#145A32;'>" +"&nbsp;&nbsp;<lol>"+__class__.privKey_C+"</lol></br>", "utf-8"))
+                self.wfile.write(bytes("<lol>" + __class__.starting_key_hex + "</lol>&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#DE3163;'><a target='_blank' href='https://bitaps.com/"+ __class__.bitAddr + "'>" +"<strong>"+ __class__.bitAddr+ "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_C+"'>"+"<strong>"+ __class__.bitAddr_C + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_S+"'>"+"<strong>"+ __class__.bitAddr_S + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_bech32+"'>"+"<strong>"+ __class__.bitAddr_bech32 + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://ethplorer.io/address/" + __class__.bitAddr_eth+"'>"+"<strong>"+ __class__.bitAddr_eth +"</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lol>" +"&nbsp;&nbsp;<lol>"+"<strong>"+ __class__.privKey+ "</strong>"+"</lol><lol style='color:#145A32;'>" +"&nbsp;&nbsp;<lol>"+"<strong>"+ __class__.privKey_C+ "</strong>"+"</lol></br>", "utf-8"))
                 __class__.searchKey = ""
             else:
                 self.wfile.write(bytes("<lol style='color:#DE3163;'>" + __class__.starting_key_hex + "</lol>&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#145A32;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr + "'>" + __class__.bitAddr + "</a>" + "&nbsp<span>"  + "</span>&nbsp" + "</lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_C + "'>" + __class__.bitAddr_C + "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_S + "'>" + __class__.bitAddr_S + "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_bech32 + "'>" + __class__.bitAddr_bech32 + "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://ethplorer.io/address/" + __class__.bitAddr_eth + "'>" + __class__.bitAddr_eth + "</a></lol>&nbsp;&nbsp;<lol style='color:#145A32;'>" + "&nbsp;&nbsp;<lol>" + "&nbsp;&nbsp<span>"  + "</span>&nbsp;&nbsp</lol>&nbsp;&nbsp;" + __class__.privKey + "</lol><lol style='color:#145A32;'>" +"&nbsp;&nbsp;<lol>"+__class__.privKey_C+"</lol></br>", "utf-8"))
@@ -538,7 +539,8 @@ Private Key HEX: {__class__.starting_key_hex}        """)
         self.wfile.write(bytes("<a href='/"+str(__class__.random)+"'>random</a>&nbsp;]", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
         self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "</p>", "utf-8"))
-        self.wfile.write(bytes("<script>var elem = document.getElementById('balance');elem.innerHTML = 'Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "'</script>", "utf-8"))        
+        self.wfile.write(bytes("<script>var elem = document.getElementById('balance');elem.innerHTML = 'Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "'</script>", "utf-8"))
+        self.wfile.write(bytes("<h3><span style='color:#34495E;'>Mizogg's Version 2022 https://mizogg.co.uk</span></h3>", "utf-8"))
         self.wfile.write(bytes("</body></html>", "utf-8"))
         __class__.addresses.clear()
         __class__.balance_on_page = "False"
