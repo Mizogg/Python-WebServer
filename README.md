@@ -27,8 +27,12 @@ Start Searching in your Web browser:
 ---------
 ## 🐒Tampermonkey🐒 Auto Refresh (Get Tamper Monkey https://www.tampermonkey.net/)
 ---------
-![image](https://user-images.githubusercontent.com/88630056/164068392-cecd6564-2316-4d0b-8c3e-362c1869f833.png)
 
+https://user-images.githubusercontent.com/88630056/164071903-a00dc295-c287-4934-90c2-07ef6317382b.mp4
+
+---------
+![image](https://user-images.githubusercontent.com/88630056/164068392-cecd6564-2316-4d0b-8c3e-362c1869f833.png)
+---------
 ```
 // ==UserScript==
 // @name         Reload Server
