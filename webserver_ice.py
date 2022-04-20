@@ -296,14 +296,21 @@ class WebServer(BaseHTTPRequestHandler):
     publicKey = publicKey_C = ""
     addresses = list()           
     arr = set()
-    filename = "address.txt"
-    print(f"Creating database from \"{filename}\"...Wait...")
+    filename = "btcaddress.txt"
+    print(f"Creating Bitcoin database from \"{filename}\"...Wait...")
     with open(filename) as in_file:
         for addr in in_file:
             bit_addr = addr.strip()
             arr.add(bit_addr)
     addr_count = len(arr)
-    print("Addresses loaded: " + str(addr_count))
+    filenameETH ='ethaddress.txt'
+    print(f"Creating ETH database from \"{filenameETH}\"...Wait...")
+    with open(filenameETH) as in_fileETH:
+        for addreth in in_fileETH:
+            bit_addreth = addreth.strip().lower()
+            arr.add(bit_addreth)
+    addr_count =  len(arr)
+    print("Total Bitcoin and ETH Addresses loaded: " + str(addr_count))
     foundling = ""
     balance_on_page = "False"        
     def RandomInteger(minN, maxN):
@@ -321,7 +328,7 @@ class WebServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes("<style>body{font-size:9.5pt;font-family:'Open Sans',sans-serif;}a{text-decoration:none}a:hover {text-decoration: underline}lol: target {background: #ccffcc; }</style>","utf-8"))
         self.wfile.write(bytes("</head>","utf-8"))
         self.wfile.write(bytes("<body link='#0000FF' vlink='#0000FF' alink='#0000FF'>","utf-8"))
-        self.wfile.write(bytes("<h1><span style='color:#34495E;'>Bitcoin and ETH Private Key Database: " + str(__class__.addr_count) + " Addresses Loaded </span></h1>", "utf-8"))
+        self.wfile.write(bytes("<h1><span style='color:#34495E;'>Bitcoin and ETH Private Key Database: " + str(__class__.addr_count) + "Total Addresses Loaded </span></h1>", "utf-8"))
         ###-------------------------------------------------------------------------------
         if self.path.startswith('/5H') or self.path.startswith('/5J') or self.path.startswith('/5K'):
             first_encode = base58.b58decode(self.path[1:])
