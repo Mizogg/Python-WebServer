@@ -406,84 +406,84 @@ class WebServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes("<h2><span style='color:#D7DBDD;background-color:#145A32;padding:2px;border-radius: 2px;'>Page #</span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>" + str(__class__.num) + "</span> <span style='color:#145A32;'><< out of >></span> <span style='color:#145A32;padding:2px;background-color:#D7DBDD;border-radius: 2px;'>904625697166532776746648320380374280100293470930272690489102837043110636675</span></h2>", "utf-8"))
         self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Current page increment for next = " + str(__class__.stride) + "</p>", "utf-8"))
         self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Current random range = " + str(__class__.randomMin) + " - " + str(__class__.randomMax) + "</p>", "utf-8"))
-        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a href='/"+str(__class__.previous)+"'>previous</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.next)+"'>next</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.random)+"'>random</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
-        self.wfile.write(bytes("[&nbsp;<a href='/"+str(__class__.first)+"'>first</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.middle)+"'>middle</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.max)+"'>last</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
-        self.wfile.write(bytes("[&nbsp;<a href='/"+str(__class__.hj)+"'>5H(end)-5J(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.jk)+"'>5J(end)-5K(start)</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
-        self.wfile.write(bytes("[&nbsp;<a href='/"+str(__class__.random5H)+"'>5H_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.random5J)+"'>5J_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.random5K)+"'>5K_random</a>&nbsp;]", "utf-8"))
+        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a id='backseq' href='/"+str(__class__.previous)+"'>previous</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='nextseq' href='/"+str(__class__.next)+"'>next</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randec' href='/"+str(__class__.random)+"'>random</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
+        self.wfile.write(bytes("[&nbsp;<a id='first' href='/"+str(__class__.first)+"'>first</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='middle' href='/"+str(__class__.middle)+"'>middle</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='last' href='/"+str(__class__.max)+"'>last</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
+        self.wfile.write(bytes("[&nbsp;<a id='5Jstart' href='/"+str(__class__.hj)+"'>5H(end)-5J(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='5Kstart' href='/"+str(__class__.jk)+"'>5J(end)-5K(start)</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
+        self.wfile.write(bytes("[&nbsp;<a id='random5H' href='/"+str(__class__.random5H)+"'>5H_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='random5J' href='/"+str(__class__.random5J)+"'>5J_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='random5K' href='/"+str(__class__.random5K)+"'>5K_random</a>&nbsp;]", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
         
-        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a href='/"+str(__class__.Kx)+"'>Kw(end)_Kx(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.Ky)+"'>Kx(end)_Ky(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.Kz)+"'>Ky(end)_Kz(start)</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
-        self.wfile.write(bytes("[&nbsp;<a href='/"+str(__class__.L1)+"'>Kz(end)-L1(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.L2)+"'>L1(end)_L2(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.L3)+"'>L2(end)_L3(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.L4)+"'>L3(end)_L4(start)</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.L5)+"'>L4(end)_L5(start)</a>&nbsp;]", "utf-8"))
+        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a id='kxstart' href='/"+str(__class__.Kx)+"'>Kw(end)_Kx(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='Kystart' href='/"+str(__class__.Ky)+"'>Kx(end)_Ky(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='Kzstart' href='/"+str(__class__.Kz)+"'>Ky(end)_Kz(start)</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
+        self.wfile.write(bytes("[&nbsp;<a id='L1start' href='/"+str(__class__.L1)+"'>Kz(end)-L1(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='L2start' href='/"+str(__class__.L2)+"'>L1(end)_L2(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='L3start' href='/"+str(__class__.L3)+"'>L2(end)_L3(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='L4start' href='/"+str(__class__.L4)+"'>L3(end)_L4(start)</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='L5start' href='/"+str(__class__.L5)+"'>L4(end)_L5(start)</a>&nbsp;]", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
         
-        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a href='/"+str(__class__.randomKw)+"'>Kw_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomKx)+"'>Kx_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomKy)+"'>Ky_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomKz)+"'>Kz_random</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
-        self.wfile.write(bytes("[&nbsp;<a href='/"+str(__class__.randomL1)+"'>L1_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomL2)+"'>L2_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomL3)+"'>L3_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomL4)+"'>L4_random</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.randomL5)+"'>L5_random</a>&nbsp;]", "utf-8"))
+        self.wfile.write(bytes("<pre class='keys'>[&nbsp;<a id='randomKw' href='/"+str(__class__.randomKw)+"'>Kw_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomKx' href='/"+str(__class__.randomKx)+"'>Kx_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomKy' href='/"+str(__class__.randomKy)+"'>Ky_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomKz' href='/"+str(__class__.randomKz)+"'>Kz_random</a>&nbsp;]&nbsp;&nbsp;&nbsp;<=>&nbsp;&nbsp;&nbsp;", "utf-8"))
+        self.wfile.write(bytes("[&nbsp;<a id='randomL1' href='/"+str(__class__.randomL1)+"'>L1_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomL2' href='/"+str(__class__.randomL2)+"'>L2_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomL3' href='/"+str(__class__.randomL3)+"'>L3_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomL4' href='/"+str(__class__.randomL4)+"'>L4_random</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randomL5' href='/"+str(__class__.randomL5)+"'>L5_random</a>&nbsp;]", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
         
         self.wfile.write(bytes("<pre>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p255)+"'>2^255</a>|<a href='/"+str(__class__.p254)+"'>2^254</a>|<a href='/"+str(__class__.p253)+"'>2^253</a>|<a href='/"+str(__class__.p252)+"'>2^252</a>|<a href='/"+str(__class__.p251)+"'>2^251</a>|<a href='/"+str(__class__.p250)+"'>2^250</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p255)+"'>2^255</a>|<a href='/"+str(__class__.p254)+"'>2^254</a>|<a href='/"+str(__class__.p253)+"'>2^253</a>|<a href='/"+str(__class__.p252)+"'>2^252</a>|<a href='/"+str(__class__.p251)+"'>2^251</a>|<a href='/"+str(__class__.p250)+"'>2^250</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p249)+"'>2^249</a>|<a href='/"+str(__class__.p248)+"'>2^248</a>|<a href='/"+str(__class__.p247)+"'>2^247</a>|<a href='/"+str(__class__.p246)+"'>2^246</a>|<a href='/"+str(__class__.p245)+"'>2^245</a>|<a href='/"+str(__class__.p244)+"'>2^244</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p243)+"'>2^243</a>|<a href='/"+str(__class__.p242)+"'>2^242</a>|<a href='/"+str(__class__.p241)+"'>2^241</a>|<a href='/"+str(__class__.p240)+"'>2^240</a>|<a href='/"+str(__class__.p239)+"'>2^239</a>|<a href='/"+str(__class__.p238)+"'>2^238</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p237)+"'>2^237</a>|<a href='/"+str(__class__.p236)+"'>2^236</a>|<a href='/"+str(__class__.p235)+"'>2^235</a>|<a href='/"+str(__class__.p234)+"'>2^234</a>|<a href='/"+str(__class__.p233)+"'>2^233</a>|<a href='/"+str(__class__.p232)+"'>2^232</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p231)+"'>2^231</a>|<a href='/"+str(__class__.p230)+"'>2^230</a>|<a href='/"+str(__class__.p229)+"'>2^229</a>|<a href='/"+str(__class__.p228)+"'>2^228</a>|<a href='/"+str(__class__.p227)+"'>2^227</a>|<a href='/"+str(__class__.p226)+"'>2^226</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p225)+"'>2^225</a>|<a href='/"+str(__class__.p224)+"'>2^224</a>|<a href='/"+str(__class__.p223)+"'>2^223</a>|<a href='/"+str(__class__.p222)+"'>2^222</a>|<a href='/"+str(__class__.p221)+"'>2^221</a>|<a href='/"+str(__class__.p220)+"'>2^220</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p219)+"'>2^219</a>|<a href='/"+str(__class__.p218)+"'>2^218</a>|<a href='/"+str(__class__.p217)+"'>2^217</a>|<a href='/"+str(__class__.p216)+"'>2^216</a>|<a href='/"+str(__class__.p215)+"'>2^215</a>|<a href='/"+str(__class__.p214)+"'>2^214</a><br>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p219)+"'>2^219</a>|<a href='/"+str(__class__.p218)+"'>2^218</a>|<a href='/"+str(__class__.p217)+"'>2^217</a>|<a href='/"+str(__class__.p216)+"'>2^216</a>|<a href='/"+str(__class__.p215)+"'>2^215</a>|<a href='/"+str(__class__.p214)+"'>2^214|</a><br>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p213)+"'>2^213</a>|<a href='/"+str(__class__.p212)+"'>2^212</a>|<a href='/"+str(__class__.p211)+"'>2^211</a>|<a href='/"+str(__class__.p210)+"'>2^210</a>|<a href='/"+str(__class__.p209)+"'>2^209</a>|<a href='/"+str(__class__.p208)+"'>2^208</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p207)+"'>2^207</a>|<a href='/"+str(__class__.p206)+"'>2^206</a>|<a href='/"+str(__class__.p205)+"'>2^205</a>|<a href='/"+str(__class__.p204)+"'>2^204</a>|<a href='/"+str(__class__.p203)+"'>2^203</a>|<a href='/"+str(__class__.p202)+"'>2^202</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p201)+"'>2^201</a>|<a href='/"+str(__class__.p200)+"'>2^200</a>|<a href='/"+str(__class__.p199)+"'>2^199</a>|<a href='/"+str(__class__.p198)+"'>2^198</a>|<a href='/"+str(__class__.p197)+"'>2^197</a>|<a href='/"+str(__class__.p196)+"'>2^196</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p195)+"'>2^195</a>|<a href='/"+str(__class__.p194)+"'>2^194</a>|<a href='/"+str(__class__.p193)+"'>2^193</a>|<a href='/"+str(__class__.p192)+"'>2^192</a>|<a href='/"+str(__class__.p191)+"'>2^191</a>|<a href='/"+str(__class__.p190)+"'>2^190</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p189)+"'>2^189</a>|<a href='/"+str(__class__.p188)+"'>2^188</a>|<a href='/"+str(__class__.p187)+"'>2^187</a>|<a href='/"+str(__class__.p186)+"'>2^186</a>|<a href='/"+str(__class__.p185)+"'>2^185</a>|<a href='/"+str(__class__.p184)+"'>2^184</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p183)+"'>2^183</a>|<a href='/"+str(__class__.p182)+"'>2^182</a>|<a href='/"+str(__class__.p181)+"'>2^181</a>|<a href='/"+str(__class__.p180)+"'>2^180</a>|<a href='/"+str(__class__.p179)+"'>2^179</a>|<a href='/"+str(__class__.p178)+"'>2^178</a>", "utf-8"))
-        self.wfile.write(bytes("|<a href='/"+str(__class__.p177)+"'>2^177</a>|<a href='/"+str(__class__.p176)+"'>2^176</a>|<a href='/"+str(__class__.p175)+"'>2^175</a>|<a href='/"+str(__class__.p174)+"'>2^174</a>|<a href='/"+str(__class__.p173)+"'>2^173</a>|<a href='/"+str(__class__.p172)+"'>2^172</a><br>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p183)+"'>2^183</a>|<a href='/"+str(__class__.p182)+"'>2^182</a>|<a href='/"+str(__class__.p181)+"'>2^181</a>|<a href='/"+str(__class__.p180)+"'>2^180</a>|<a href='/"+str(__class__.p179)+"'>2^179</a>|<a href='/"+str(__class__.p178)+"'>2^178</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p177)+"'>2^177</a>|<a href='/"+str(__class__.p176)+"'>2^176</a>|<a href='/"+str(__class__.p175)+"'>2^175</a>|<a href='/"+str(__class__.p174)+"'>2^174</a>|<a href='/"+str(__class__.p173)+"'>2^173</a>|<a href='/"+str(__class__.p172)+"'>2^172|</a><br>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p171)+"'>2^171</a>|<a href='/"+str(__class__.p170)+"'>2^170</a>|<a href='/"+str(__class__.p169)+"'>2^169</a>|<a href='/"+str(__class__.p168)+"'>2^168</a>|<a href='/"+str(__class__.p167)+"'>2^167</a>|<a href='/"+str(__class__.p166)+"'>2^166</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p165)+"'>2^165</a>|<a href='/"+str(__class__.p164)+"'>2^164</a>|<a href='/"+str(__class__.p163)+"'>2^163</a>|<a href='/"+str(__class__.p162)+"'>2^162</a>|<a href='/"+str(__class__.p161)+"'>2^161</a>|<a href='/"+str(__class__.p160)+"'>2^160</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p159)+"'>2^159</a>|<a href='/"+str(__class__.p158)+"'>2^158</a>|<a href='/"+str(__class__.p157)+"'>2^157</a>|<a href='/"+str(__class__.p156)+"'>2^156</a>|<a href='/"+str(__class__.p155)+"'>2^155</a>|<a href='/"+str(__class__.p154)+"'>2^154</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p153)+"'>2^153</a>|<a href='/"+str(__class__.p152)+"'>2^152</a>|<a href='/"+str(__class__.p151)+"'>2^151</a>|<a href='/"+str(__class__.p150)+"'>2^150</a>|<a href='/"+str(__class__.p149)+"'>2^149</a>|<a href='/"+str(__class__.p148)+"'>2^148</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p147)+"'>2^147</a>|<a href='/"+str(__class__.p146)+"'>2^146</a>|<a href='/"+str(__class__.p145)+"'>2^145</a>|<a href='/"+str(__class__.p144)+"'>2^144</a>|<a href='/"+str(__class__.p143)+"'>2^143</a>|<a href='/"+str(__class__.p142)+"'>2^142</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p147)+"'>2^147</a>|<a href='/"+str(__class__.p146)+"'>2^146</a>|<a href='/"+str(__class__.p145)+"'>2^145</a>|<a href='/"+str(__class__.p144)+"'>2^144</a>|<a href='/"+str(__class__.p143)+"'>2^143</a>|<a href='/"+str(__class__.p142)+"'>2^142</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p141)+"'>2^141</a>|<a href='/"+str(__class__.p140)+"'>2^140</a>|<a href='/"+str(__class__.p139)+"'>2^139</a>|<a href='/"+str(__class__.p138)+"'>2^138</a>|<a href='/"+str(__class__.p137)+"'>2^137</a>|<a href='/"+str(__class__.p136)+"'>2^136</a>", "utf-8"))
-        self.wfile.write(bytes("|<a href='/"+str(__class__.p135)+"'>2^135</a>|<a href='/"+str(__class__.p134)+"'>2^134</a>|<a href='/"+str(__class__.p133)+"'>2^133</a>|<a href='/"+str(__class__.p132)+"'>2^132</a>|<a href='/"+str(__class__.p131)+"'>2^131</a>|<a href='/"+str(__class__.p130)+"'>2^130</a><br>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p135)+"'>2^135</a>|<a href='/"+str(__class__.p134)+"'>2^134</a>|<a href='/"+str(__class__.p133)+"'>2^133</a>|<a href='/"+str(__class__.p132)+"'>2^132</a>|<a href='/"+str(__class__.p131)+"'>2^131</a>|<a href='/"+str(__class__.p130)+"'>2^130|</a><br>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p129)+"'>2^129</a>|<a href='/"+str(__class__.p128)+"'>2^128</a>|<a href='/"+str(__class__.p127)+"'>2^127</a>|<a href='/"+str(__class__.p126)+"'>2^126</a>|<a href='/"+str(__class__.p125)+"'>2^125</a>|<a href='/"+str(__class__.p124)+"'>2^124</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p123)+"'>2^123</a>|<a href='/"+str(__class__.p122)+"'>2^122</a>|<a href='/"+str(__class__.p121)+"'>2^121</a>|<a href='/"+str(__class__.p120)+"'>2^120</a>|<a href='/"+str(__class__.p119)+"'>2^119</a>|<a href='/"+str(__class__.p118)+"'>2^118</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p117)+"'>2^117</a>|<a href='/"+str(__class__.p116)+"'>2^116</a>|<a href='/"+str(__class__.p115)+"'>2^115</a>|<a href='/"+str(__class__.p114)+"'>2^114</a>|<a href='/"+str(__class__.p113)+"'>2^113</a>|<a href='/"+str(__class__.p112)+"'>2^112</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p111)+"'>2^111</a>|<a href='/"+str(__class__.p110)+"'>2^110</a>|<a href='/"+str(__class__.p109)+"'>2^109</a>|<a href='/"+str(__class__.p108)+"'>2^108</a>|<a href='/"+str(__class__.p107)+"'>2^107</a>|<a href='/"+str(__class__.p106)+"'>2^106</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p111)+"'>2^111</a>|<a href='/"+str(__class__.p110)+"'>2^110</a>|<a href='/"+str(__class__.p109)+"'>2^109</a>|<a href='/"+str(__class__.p108)+"'>2^108</a>|<a href='/"+str(__class__.p107)+"'>2^107</a>|<a href='/"+str(__class__.p106)+"'>2^106</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p105)+"'>2^105</a>|<a href='/"+str(__class__.p104)+"'>2^104</a>|<a href='/"+str(__class__.p103)+"'>2^103</a>|<a href='/"+str(__class__.p102)+"'>2^102</a>|<a href='/"+str(__class__.p101)+"'>2^101</a>|<a href='/"+str(__class__.p100)+"'>2^100</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p99)+"'>2^99</a>|<a href='/"+str(__class__.p98)+"'>2^98</a>|<a href='/"+str(__class__.p97)+"'>2^97</a>|<a href='/"+str(__class__.p96)+"'>2^96</a>|<a href='/"+str(__class__.p95)+"'>2^95</a>|<a href='/"+str(__class__.p94)+"'>2^94</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p93)+"'>2^93</a>|<a href='/"+str(__class__.p92)+"'>2^92</a>|<a href='/"+str(__class__.p91)+"'>2^91</a>|<a href='/"+str(__class__.p90)+"'>2^90</a>|<a href='/"+str(__class__.p89)+"'>2^89</a>|<a href='/"+str(__class__.p88)+"'>2^88</a>", "utf-8"))
-        self.wfile.write(bytes("|<a href='/"+str(__class__.p87)+"'>2^87</a>|<a href='/"+str(__class__.p86)+"'>2^86</a><br>|<a href='/"+str(__class__.p85)+"'>2^85</a>|<a href='/"+str(__class__.p84)+"'>2^84</a>|<a href='/"+str(__class__.p83)+"'>2^83</a>|<a href='/"+str(__class__.p82)+"'>2^82</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p87)+"'>2^87</a>|<a href='/"+str(__class__.p86)+"'>2^86|</a><br>|<a href='/"+str(__class__.p85)+"'>2^85</a>|<a href='/"+str(__class__.p84)+"'>2^84</a>|<a href='/"+str(__class__.p83)+"'>2^83</a>|<a href='/"+str(__class__.p82)+"'>2^82</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p81)+"'>2^81</a>|<a href='/"+str(__class__.p82)+"'>2^82</a>|<a href='/"+str(__class__.p81)+"'>2^81</a>|<a href='/"+str(__class__.p80)+"'>2^80</a>|<a href='/"+str(__class__.p79)+"'>2^79</a>|<a href='/"+str(__class__.p78)+"'>2^78</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p77)+"'>2^77</a>|<a href='/"+str(__class__.p76)+"'>2^76</a>|<a href='/"+str(__class__.p75)+"'>2^75</a>|<a href='/"+str(__class__.p74)+"'>2^74</a>|<a href='/"+str(__class__.p73)+"'>2^73</a>|<a href='/"+str(__class__.p72)+"'>2^72</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p77)+"'>2^77</a>|<a href='/"+str(__class__.p76)+"'>2^76</a>|<a href='/"+str(__class__.p75)+"'>2^75</a>|<a href='/"+str(__class__.p74)+"'>2^74</a>|<a href='/"+str(__class__.p73)+"'>2^73</a>|<a href='/"+str(__class__.p72)+"'>2^72</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p71)+"'>2^71</a>|<a href='/"+str(__class__.p70)+"'>2^70</a>|<a href='/"+str(__class__.p69)+"'>2^69</a>|<a href='/"+str(__class__.p68)+"'>2^68</a>|<a href='/"+str(__class__.p67)+"'>2^67</a>|<a href='/"+str(__class__.p66)+"'>2^66</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p65)+"'>2^65</a>|<a href='/"+str(__class__.p64)+"'>2^64</a>|<a href='/"+str(__class__.p63)+"'>2^63</a>|<a href='/"+str(__class__.p62)+"'>2^62</a>|<a href='/"+str(__class__.p61)+"'>2^61</a>|<a href='/"+str(__class__.p60)+"'>2^60</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p59)+"'>2^59</a>|<a href='/"+str(__class__.p58)+"'>2^58</a>|<a href='/"+str(__class__.p57)+"'>2^57</a>|<a href='/"+str(__class__.p56)+"'>2^56</a>|<a href='/"+str(__class__.p55)+"'>2^55</a>|<a href='/"+str(__class__.p54)+"'>2^54</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p53)+"'>2^53</a>|<a href='/"+str(__class__.p52)+"'>2^52</a>|<a href='/"+str(__class__.p51)+"'>2^51</a>|<a href='/"+str(__class__.p50)+"'>2^50</a>|<a href='/"+str(__class__.p49)+"'>2^49</a>|<a href='/"+str(__class__.p48)+"'>2^48</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p47)+"'>2^47</a>|<a href='/"+str(__class__.p46)+"'>2^46</a>|<a href='/"+str(__class__.p45)+"'>2^45</a>|<a href='/"+str(__class__.p44)+"'>2^44</a>|<a href='/"+str(__class__.p43)+"'>2^43</a>|<a href='/"+str(__class__.p42)+"'>2^42</a>", "utf-8"))
-        self.wfile.write(bytes("|<a href='/"+str(__class__.p41)+"'>2^41</a>|<a href='/"+str(__class__.p40)+"'>2^40</a>|<a href='/"+str(__class__.p39)+"'>2^39</a>|<a href='/"+str(__class__.p38)+"'>2^38</a><br>|<a href='/"+str(__class__.p37)+"'>2^37</a>|<a href='/"+str(__class__.p36)+"'>2^36</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p41)+"'>2^41</a>|<a href='/"+str(__class__.p40)+"'>2^40</a>|<a href='/"+str(__class__.p39)+"'>2^39</a>|<a href='/"+str(__class__.p38)+"'>2^38|</a><br>|<a href='/"+str(__class__.p37)+"'>2^37</a>|<a href='/"+str(__class__.p36)+"'>2^36</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p35)+"'>2^35</a>|<a href='/"+str(__class__.p34)+"'>2^34</a>|<a href='/"+str(__class__.p33)+"'>2^33</a>|<a href='/"+str(__class__.p32)+"'>2^32</a>|<a href='/"+str(__class__.p31)+"'>2^31</a>|<a href='/"+str(__class__.p30)+"'>2^30</a>", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.p29)+"'>2^29</a>|<a href='/"+str(__class__.p28)+"'>2^28</a>|<a href='/"+str(__class__.p27)+"'>2^27</a>|<a href='/"+str(__class__.p26)+"'>2^26</a>|<a href='/"+str(__class__.p25)+"'>2^25</a>|<a href='/"+str(__class__.p24)+"'>2^24</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p29)+"'>2^29</a>|<a href='/"+str(__class__.p28)+"'>2^28</a>|<a href='/"+str(__class__.p27)+"'>2^27</a>|<a href='/"+str(__class__.p26)+"'>2^26</a>|<a href='/"+str(__class__.p25)+"'>2^25</a>|<a href='/"+str(__class__.p24)+"'>2^24</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p23)+"'>2^23</a>|<a href='/"+str(__class__.p22)+"'>2^22</a>|<a href='/"+str(__class__.p21)+"'>2^21</a>|<a href='/"+str(__class__.p20)+"'>2^20</a>|<a href='/"+str(__class__.p19)+"'>2^19</a>|<a href='/"+str(__class__.p18)+"'>2^18</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p17)+"'>2^17</a>|<a href='/"+str(__class__.p16)+"'>2^16</a>|<a href='/"+str(__class__.p15)+"'>2^15</a>|<a href='/"+str(__class__.p14)+"'>2^14</a>|<a href='/"+str(__class__.p13)+"'>2^13</a>|<a href='/"+str(__class__.p12)+"'>2^12</a>", "utf-8"))
         self.wfile.write(bytes("|<a href='/"+str(__class__.p11)+"'>2^11</a>|<a href='/"+str(__class__.p10)+"'>2^10</a>|<a href='/"+str(__class__.p9)+"'>2^9</a>|<a href='/"+str(__class__.p8)+"'>2^8</a>|<a href='/"+str(__class__.p7)+"'>2^7</a>|<a href='/"+str(__class__.p6)+"'>2^6</a>", "utf-8"))
-        self.wfile.write(bytes("|<a href='/"+str(__class__.p5)+"'>2^5</a>|<a href='/"+str(__class__.p4)+"'>2^4</a>|<a href='/"+str(__class__.p3)+"'>2^3</a>|<a href='/"+str(__class__.p2)+"'>2^2</a>|<a href='/"+str(__class__.p1)+"'>2^1</a>", "utf-8"))
+        self.wfile.write(bytes("|<a href='/"+str(__class__.p5)+"'>2^5</a>|<a href='/"+str(__class__.p4)+"'>2^4</a>|<a href='/"+str(__class__.p3)+"'>2^3</a>|<a href='/"+str(__class__.p2)+"'>2^2</a>|<a href='/"+str(__class__.p1)+"'>2^1|</a>", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
         
         __class__.starting_key_hex = hex(__class__.startPrivKey)[2:].zfill(64)
@@ -513,6 +513,26 @@ class WebServer(BaseHTTPRequestHandler):
             __class__.addresses.append(__class__.bitAddr_bech32.strip());
             __class__.addresses.append(__class__.bitAddr_eth.strip());
             __class__.starting_key_hex = hex(__class__.startPrivKey)[2:].zfill(64)
+            if __class__.bitAddr in  __class__.arr or __class__.bitAddr_C in __class__.arr or __class__.bitAddr_S in __class__.arr or __class__.bitAddr_bech32 in __class__.arr or __class__.bitAddr_eth in __class__.arr:
+                print (f"""\n
+Bitcoin Address UnCompressed :  {__class__.bitAddr}
+Private Key WIF UnCompressed : {__class__.privKey}
+Bitcoin Address Compressed   :  {__class__.bitAddr_C}
+Private Key WIF Compressed   : {__class__.privKey_C}
+Bitcoin Address SegWit 3    :  {__class__.bitAddr_S}
+Bitcoin Address bc1   :  {__class__.bitAddr_bech32}
+Ethereum  Address       :  {__class__.bitAddr_eth}
+Private Key HEX: {__class__.starting_key_hex}        """)
+                with open("winner.txt", "a", encoding="utf-8") as f:
+                    f.write(f"""\n
+Bitcoin Address UnCompressed :  {__class__.bitAddr}
+Private Key WIF UnCompressed : {__class__.privKey}
+Bitcoin Address Compressed   :  {__class__.bitAddr_C}
+Private Key WIF Compressed   : {__class__.privKey_C}
+Bitcoin Address SegWit 3    :  {__class__.bitAddr_S}
+Bitcoin Address bc1   :  {__class__.bitAddr_bech32}
+Ethereum  Address       :  {__class__.bitAddr_eth}
+Private Key HEX: {__class__.starting_key_hex}        """)
             if __class__.bitAddr == __class__.searchKey or __class__.bitAddr_C == __class__.searchKey or __class__.bitAddr_S == __class__.searchKey or __class__.bitAddr_bech32 == __class__.searchKey or __class__.bitAddr_eth == __class__.searchKey:
                 self.wfile.write(bytes("<lol>" + __class__.starting_key_hex + "</lol>&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#DE3163;'><a target='_blank' href='https://bitaps.com/"+ __class__.bitAddr + "'>" +"<strong>"+ __class__.bitAddr+ "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_C+"'>"+"<strong>"+ __class__.bitAddr_C + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_S+"'>"+"<strong>"+ __class__.bitAddr_S + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://bitaps.com/" + __class__.bitAddr_bech32+"'>"+"<strong>"+ __class__.bitAddr_bech32 + "</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lol style='display:inline-block;width:230px;color:#D35400;'><a target='_blank' href='https://ethplorer.io/address/" + __class__.bitAddr_eth+"'>"+"<strong>"+ __class__.bitAddr_eth +"</strong>"+ "</a></lol>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lol>" +"&nbsp;&nbsp;<lol>"+"<strong>"+ __class__.privKey+ "</strong>"+"</lol><lol style='color:#145A32;'>" +"&nbsp;&nbsp;<lol>"+"<strong>"+ __class__.privKey_C+ "</strong>"+"</lol></br>", "utf-8"))
                 __class__.searchKey = ""
@@ -526,19 +546,11 @@ class WebServer(BaseHTTPRequestHandler):
             if addr in __class__.arr:
                 __class__.balance_on_page = "True"
                 __class__.foundling = addr + " "
-                print (__class__.foundling)
-                with open("winner.txt", "a", encoding="utf-8") as f:
-                    f.write(f"""\n
-Bitcoin Address UnCompressed :  {__class__.bitAddr}
-Private Key WIF UnCompressed : {__class__.privKey}
-Bitcoin Address Compressed   :  {__class__.bitAddr_C}
-Private Key WIF Compressed   : {__class__.privKey_C}
-Private Key HEX: {__class__.starting_key_hex}        """)
-        self.wfile.write(bytes("</pre><pre class='keys'>[&nbsp;<a href='/"+str(__class__.previous)+"'>previous</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.next)+"'>next</a> | ", "utf-8"))
-        self.wfile.write(bytes("<a href='/"+str(__class__.random)+"'>random</a>&nbsp;]", "utf-8"))
+        self.wfile.write(bytes("</pre><pre class='keys'>[&nbsp;<a id='backseq' href='/"+str(__class__.previous)+"'>previous</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='nextseq' href='/"+str(__class__.next)+"'>next</a> | ", "utf-8"))
+        self.wfile.write(bytes("<a id='randec' href='/"+str(__class__.random)+"'>random</a>&nbsp;]", "utf-8"))
         self.wfile.write(bytes("</pre>", "utf-8"))
-        self.wfile.write(bytes("<p style='color:brown;font-weight:bold;'>Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "</p>", "utf-8"))
+        self.wfile.write(bytes("<p id='found' style='color:brown;font-weight:bold;'>Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "</p>", "utf-8"))
         self.wfile.write(bytes("<script>var elem = document.getElementById('balance');elem.innerHTML = 'Balance on this Page: " + __class__.balance_on_page + " " + __class__.foundling + "'</script>", "utf-8"))
         self.wfile.write(bytes("<h3><span style='color:#34495E;'>Mizogg's Version 2022 https://mizogg.co.uk</span></h3>", "utf-8"))
         self.wfile.write(bytes("</body></html>", "utf-8"))
