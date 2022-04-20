@@ -65,7 +65,9 @@ https://user-images.githubusercontent.com/88630056/164071903-a00dc295-c287-4934-
 })();
 ```
 ---------
-## 🐒Tampermonkey🐒 Highlight and Stop.To find out more on how to use this visit https://mizogg.co.uk/tampermonkey/ )
+## 🐒Tampermonkey🐒 Highlight and Stop.To find out more on how to use this visit https://mizogg.co.uk/tampermonkey/ ) 
+
+Or Join Telegram Cryptocracker https://t.me/CryptoCrackersUK for instant updates and changes bigger database files to help with your hunt.
 ---------
 ```
 // ==UserScript==
