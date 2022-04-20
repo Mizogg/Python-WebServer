@@ -11,7 +11,8 @@
 - ice_secp256k1.dll
 - ice_secp256k1.so
 - secp256k1.py
-- address.txt (One address per line)
+- btcaddress.txt (One address per line)
+- ethaddress.txt (One address per line)
 ---------
 To install "Bit Library":
 > pip install bit
