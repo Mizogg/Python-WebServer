@@ -24,13 +24,17 @@ Start Searching in your Web browser:
 - localhost:3333/1 (start from first page)
 - localhost:3333/1[256] (change next increment)
 - localhost:3333/1(100-500) (change random range)
+- Puzzle 64 Start = 144115188075855873 Page
+- Puzzle 64 Stop = 288230376151711745 Page
+- Random Puzzle 64=  http://localhost:3333/1(144115188075855873-288230376151711745) (change random range)
+
 - wif search = http://localhost:3333/L3VVpPhkahdq7S3DQovZYXXLfFX96o4nfGAgGpGZyJXVw2Fx4XvV
 - or http://localhost:3333/5HpHagT65TZzG1PH3CSu64HcGh19CVFzq1pFa44r8FXZrQAaefe
 
-- dec search = http://localhost:3333/73824873287973477289749872
-- or  http://localhost:3333/@73824873287973477289749872
+- Dec search = http://localhost:3333/73824873287973477289749872
+- or Dec search and Highlight found  http://localhost:3333/@73824873287973477289749872
 
-- HEX Search = http://localhost:3333/$fffffffff 
+- HEX Search and Highlight found = http://localhost:3333/$fffffffff 
 - or http://localhost:3333/$FFFFF
 ---------
 ## 🐒Tampermonkey🐒 Auto Refresh (Get Tamper Monkey https://www.tampermonkey.net/)
