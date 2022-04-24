@@ -1,5 +1,12 @@
 # 🐍Python-WebServer🐍 and 🐒Tampermonkey🐒
 
+
+New Version Websever_4.7.5.py Includes Auto Random and Auto Sequential. No NEED for tamper monkey. Amazing Program.
+
+😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
+
+https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-bf87-d57b08239fb0.mp4
+
 ![image](https://user-images.githubusercontent.com/88630056/163732565-e298e77e-bb2c-46f7-9b77-e94a1be53a77.png)
 
 ![image](https://user-images.githubusercontent.com/88630056/163732575-846162fe-dc77-4160-a90b-4bac14696e26.png)
@@ -38,10 +45,6 @@ Start Searching in your Web browser:
 - or http://localhost:3333/$FFFFF
 ---------
 ## 🐒Tampermonkey🐒 Auto Refresh (Get Tamper Monkey https://www.tampermonkey.net/)
----------
-
-https://user-images.githubusercontent.com/88630056/164071903-a00dc295-c287-4934-90c2-07ef6317382b.mp4
-
 ---------
 ![image](https://user-images.githubusercontent.com/88630056/164068392-cecd6564-2316-4d0b-8c3e-362c1869f833.png)
 ---------
