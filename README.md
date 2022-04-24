@@ -100,6 +100,9 @@ U: 664f5c265188f85ba8b0e80b6c946a586d8b0663  C: 444c2585216c5e469ac860ad7dde21e8
 
 ---------
 ## 🐒Tampermonkey🐒 Auto Refresh (Get Tamper Monkey https://www.tampermonkey.net/)
+
+For Older Websever.py Version. This Includes addresses starting3 bc1 and ETH.
+
 ---------
 ![image](https://user-images.githubusercontent.com/88630056/164068392-cecd6564-2316-4d0b-8c3e-362c1869f833.png)
 ---------
