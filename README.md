@@ -20,6 +20,7 @@ https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-
 - secp256k1.py
 - btcaddress.txt (One address per line)
 - ethaddress.txt (One address per line)
+- jquery-3.6.0.js
 ---------
 To install "Bit Library":
 > pip install bit
