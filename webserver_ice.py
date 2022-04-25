@@ -302,7 +302,7 @@ class WebServer(BaseHTTPRequestHandler):
     addresses = list()  #saves all generated addresses on page here to check if any in loaded arr set
     #-------creating set in memory with addresses(probably the best option for fast elements search but takes more memory because of hashtable)               
     arr = set()
-    filename = "address.txt"
+    filename = "btcaddress.txt"
     print(f"Creating database from \"{filename}\"...Wait...")
     with open(filename) as in_file:
         for addr in in_file:
@@ -310,7 +310,7 @@ class WebServer(BaseHTTPRequestHandler):
             arr.add(bit_addr)
     addr_count = len(arr)
     print("BTC Addresses loaded: " + str(addr_count))
-    filenameETH ='address.txt'
+    filenameETH ='ethaddress.txt'
     print(f"Creating ETH database from \"{filenameETH}\"...Wait...")
     with open(filenameETH) as in_fileETH:
         for addreth in in_fileETH:
