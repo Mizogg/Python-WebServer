@@ -1,7 +1,10 @@
 # 🐍Python-WebServer🐍 and 🐒Tampermonkey🐒
 
+Webserver.py Hunt for Bitcoin and ETH.
 
-New Version Websever_4.7.5.py Includes Auto Random and Auto Sequential. No NEED for tamper monkey. Amazing Program.
+Webserver_4.7.5.py Hunt for Bitcoin.
+
+Includes Auto Random and Auto Sequential. No NEED for tamper monkey. Amazing Program. 
 
 😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
 
@@ -14,7 +17,6 @@ https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-
 ---------
 # Requirements:
 - Python3
-- "Bit" python module
 - https://github.com/iceland2k14/secp256k1 files
 - ice_secp256k1.dll
 - ice_secp256k1.so
@@ -22,9 +24,6 @@ https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-
 - btcaddress.txt (One address per line)
 - ethaddress.txt (One address per line)
 - jquery-3.6.0.js
----------
-To install "Bit Library":
-> pip install bit
 ---------
 To Start 🐍Python-WebServer🐍:
 > python webserver.py
