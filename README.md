@@ -1,8 +1,8 @@
 # 🐍Python-WebServer🐍 and 🐒Tampermonkey🐒
 
-Webserver_ice.py Hunt for Bitcoin and ETH.
+Webserver_ice.py Hunt for Bitcoin Adresses starting 1, 3 and bc1 and ETH.
 
-Webserver_4.7.5.py Hunt for Bitcoin.
+Webserver_4.7.5.py Hunt for Bitcoin. Just addresses starting with 1
 
 Includes Auto Random and Auto Sequential. No NEED for tamper monkey. Amazing Program. 
 
