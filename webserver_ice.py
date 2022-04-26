@@ -1,3 +1,4 @@
+# 26/04/2022 Version
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import secp256k1 as ice
 import hashlib, base58, binascii, random, sys
