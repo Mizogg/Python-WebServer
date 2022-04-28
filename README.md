@@ -13,6 +13,7 @@ WIF search by WIF
 $ffff or $FFFFF search page by privatekey hex
 [123] change increment
 (2345-8856464646) change random range
+(72057594037927937-144115188075855873) random range puzzle 64
 ```
 😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
 
@@ -40,8 +41,8 @@ Start Searching in your Web browser:
 - localhost:3333/1 (start from first page)
 - localhost:3333/1[256] (change next increment)
 - localhost:3333/1(100-500) (change random range)
-- Puzzle 64 Start = 144115188075855873 Page
-- Puzzle 64 Stop = 288230376151711745 Page
+- Puzzle 64 Start = 72057594037927937 Page
+- Puzzle 64 Stop = 144115188075855873 Page
 - Random Puzzle 64=  http://localhost:3333/1(144115188075855873-288230376151711745) (change random range)
 
 - wif search = http://localhost:3333/L3VVpPhkahdq7S3DQovZYXXLfFX96o4nfGAgGpGZyJXVw2Fx4XvV
