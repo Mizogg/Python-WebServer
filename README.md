@@ -5,6 +5,13 @@ Webserver_ice.py Hunt for Bitcoin Adresses starting 1, 3 and bc1 and ETH.
 Webserver_4.7.5.py Hunt for Bitcoin. Just addresses starting with 1
 
 Includes Auto Random and Auto Sequential. No NEED for tamper monkey. Amazing Program. 
+search field added. To use:(paste and remove focus by clicking)
+WIF search by WIF
+1878574747  search by page number
+@764523535  search page by privatekey decimal
+$ffff or $FFFFF search page by privatekey hex
+[123] change increment
+(2345-8856464646) change random range
 
 😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
 
