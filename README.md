@@ -26,6 +26,7 @@ https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-
 ---------
 # Requirements:
 - Python3
+- pip install base58
 - https://github.com/iceland2k14/secp256k1 files
 - ice_secp256k1.dll
 - ice_secp256k1.so
