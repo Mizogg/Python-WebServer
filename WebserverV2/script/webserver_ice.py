@@ -1,4 +1,4 @@
-#28/04/2022
+#06/05/2022
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
 import threading
@@ -308,7 +308,8 @@ class WebServer(BaseHTTPRequestHandler):
     privateKey = privateKey_C = ""
     publicKey = publicKey_C = ""
     addresses = list()  #saves all generated addresses on page here to check if any in loaded arr set
-    #-------creating set in memory with addresses(probably the best option for fast elements search but takes more memory because of hashtable)               
+    #-------creating set in memory with addresses(probably the best option for fast elements search but takes more memory because of hashtable)
+    arr = set()    
     bloombtc = Path(__file__).resolve()
     ressbtc = bloombtc.parents[1] / 'datafiles/BF/btc.bf'
     bloometh = Path(__file__).resolve()
