@@ -1,6 +1,6 @@
 # 🐍Python-WebServer🐍 and 🐒Tampermonkey🐒
 
-Webserver_ice.py Hunt for Bitcoin Adresses starting 1, 3 and bc1 and ETH.
+Webserver_ice.py Hunt for Bitcoin Adresses starting 1, 3 and bc1 and ETH. New BloomFilter for Quicker database loading and search. Auto database Update included.
 
 Webserver_4.9.1.py Hunt for Bitcoin. Just addresses starting with 1
 
@@ -16,6 +16,8 @@ $ffff or $FFFFF search page by privatekey hex
 (72057594037927937-144115188075855873) random range puzzle 64
 ```
 😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
+
+Also Special Thanks to https://github.com/evgenyunholy/UnholyMegaBrut for more Ideas and Bloomfilter Files check out his GitHub to get database.
 
 https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-bf87-d57b08239fb0.mp4
 
