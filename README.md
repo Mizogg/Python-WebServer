@@ -19,7 +19,7 @@ $ffff or $FFFFF search page by privatekey hex
 ```
 😊 😇 🙂Special THanks to Alex Curl for All his hard work😊 😇 🙂
 
-Also Special Thanks to https://github.com/evgenyunholy/UnholyMegaBrut for more Ideas and Bloomfilter Files check out his GitHub to get database.
+Also Special Thanks to https://github.com/evgenyunholy/UnholyMegaBrut for more Ideas and Bloomfilter Files check out his GitHub to get database.Also they can be downloaded from here. https://mega.nz/folder/e15hgDZR#ypdx7ULcBR6rvleFM8_CIA
 
 https://user-images.githubusercontent.com/88630056/164995299-07b12034-c064-4133-bf87-d57b08239fb0.mp4
 
