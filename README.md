@@ -2,7 +2,7 @@
 
 Webserver_ice.py Hunt for Bitcoin Adresses starting 1, 3 and bc1 and ETH. New BloomFilter for Quicker database loading and search. Auto database Update included.
 
-Test it here http://194.163.146.206:3333/ (speed limited.)
+Test it here http://194.163.146.206
 
 Webserver_4.9.1.py Hunt for Bitcoin. Just addresses starting with 1
 
