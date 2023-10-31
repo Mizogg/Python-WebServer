@@ -253,4 +253,4 @@ Or Join Telegram Cryptocracker https://t.me/TeamHunter_GUI for instant updates a
 })();
 ```
 
-Find Out More Join more Like me on Telegram https://t.me/CryptoCrackersUK
+Find Out More Join more Like me on Telegram https://t.me/TeamHunter_GUI
