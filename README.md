@@ -150,7 +150,7 @@ For Older Websever.py Version. This Includes addresses starting3 bc1 and ETH.
 ---------
 ## 🐒Tampermonkey🐒 Highlight and Stop.To find out more on how to use this visit https://mizogg.co.uk/tampermonkey/ ) 
 
-Or Join Telegram Cryptocracker https://t.me/CryptoCrackersUK for instant updates and changes bigger database files to help with your hunt.
+Or Join Telegram Cryptocracker https://t.me/TeamHunter_GUI for instant updates and changes bigger database files to help with your hunt.
 ---------
 ```
 // ==UserScript==
